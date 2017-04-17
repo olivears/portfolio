@@ -1,5 +1,6 @@
 {
   "PORTFOLIO": "Portfolio",
+  "CURRICULUM": "Curriculum",
   "ABOUT": "About",
   "CONTACT": "CONTACT",
 
@@ -10,6 +11,11 @@
   "EMAIL": "Email",
   "PHONE": "Phone",
   "MESSAGE": "Message",
+  "SEND": "Send",
+
+  "WORK": "Work",
+  "EDUCATION": "Education",
+  "PRESENT": "Present",
 
   "FIND_ME_ON_WEB": "Find me on web"
 }
