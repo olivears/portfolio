@@ -1,3 +1,74 @@
-<p>
-  curriculum works!
-</p>
+<section class="success" id="curriculum">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>{{'CURRICULUM' | translate}}</h2>
+
+        <hr class="item-divider item-divider-light item-divider-star">
+      </div>
+    </div>
+
+    <!-- Jobs -->
+    <div class="row job-item" *ngFor="let job of jobs; let index=index">
+      <div *ngIf="index === 0" class="col-lg-3">
+        <h3 class="headline-inline curriculum-title">
+          <i class="fa fa-briefcase"></i>
+          {{'WORK' | translate}}
+        </h3>
+      </div>
+
+      <div class="col-lg-6" [ngClass]="{'col-lg-offset-3' : index > 0}">
+        <h3>{{job.title}}</h3>
+        <h5>
+          <i class="fa fa-building-o"></i>
+          {{job.company}}
+        </h5>
+        <div class="job-sub-item">
+          <i class="fa fa-globe"></i>
+          <a href="{{job.site}}" target="_blank">{{job.site}}</a>
+        </div>
+        <div class="job-sub-item">
+          <i class="fa fa-calendar"></i>
+          <span>{{job.begin | date:'MMMM yyyy'}}</span>
+           -
+          <span *ngIf="job.end">{{job.end | date:'MMMM yyyy'}}</span>
+          <span *ngIf="!job.end">{{'PRESENT' | translate}}</span>
+        </div>
+
+        <div class="job-sub-item">{{job.desc | translate}}</div>
+        <hr>
+      </div>
+      <div class="col-lg-3 hidden"></div>
+    </div>
+
+
+    <!--Education -->
+    <div class="row education-item" *ngFor="let education of academicEducation; let index=index">
+
+      <div *ngIf="index === 0" class="col-lg-3">
+        <h3 class="headline-inline curriculum-title">
+          <i class="fa fa-book"></i>
+          {{'EDUCATION' | translate}}
+        </h3>
+      </div>
+
+      <div class="col-lg-6" [ngClass]="{'col-lg-offset-3' : index > 0}">
+        <h3>{{education.title}}</h3>
+        <h5>
+          <i class="fa fa-building-o"></i>
+          {{education.institution}}
+        </h5>
+        <div>
+          <i class="fa fa-calendar"></i>
+          <span>{{education.begin | date:'MMMM yyyy'}}</span>
+          -
+          <span *ngIf="education.end">{{education.end | date:'MMMM yyyy'}}</span>
+          <span *ngIf="!education.end">{{'PRESENT' | translate}}</span>
+        </div>
+        <hr>
+      </div>
+      <div class="col-lg-3 hidden"></div>
+    </div>
+
+  </div>
+</section>

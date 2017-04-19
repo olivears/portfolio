@@ -1,0 +1,21 @@
+.job-item hr {
+  border: solid 1px white !important;
+  margin: 20px 0;
+}
+
+.education-item hr {
+  border: solid 1px white !important;
+  margin: 20px 0;
+}
+
+.curriculum-title {
+  font-weight: bold;
+}
+
+.job-sub-item {
+  margin: 10px 0;
+}
+
+.job-sub-item a {
+  color: white;
+}

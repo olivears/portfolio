@@ -7,8 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  private projects: Array<any> = [];
-  private project: any;
+  projects: Array<any> = [];
+  project: any;
 
 
   constructor() {
